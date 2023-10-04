@@ -22,7 +22,8 @@ while (c < size)
 	else
 		shelter[c] = new Dog();
 	shelter[c]->makeSound();
-	std::cout << "lets take a look at whats going on is that cute little head of this " << shelter[c]->getType() << std::endl;
+	if (shelter[c]->getType() == "Cat")
+		std::cout << "lets take a look at whats going on is that cute little head of this " << shelter[c]->getType() << ": " << std::endl;
 	shelter[c++]->getIdea();
 	std::cout << "----------------------" << std::endl;
 }
@@ -45,5 +46,6 @@ std::cout << "but the cloned " << clone->getType() << " survived it all" << std:
 clone->makeSound();
 std::cout << "i have an idea nya~:" << std::endl;;
 clone->getIdea();
+delete clone;
 return (0);
 }
