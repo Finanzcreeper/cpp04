@@ -21,7 +21,9 @@ while (c < size)
 		shelter[c] = new Cat();
 	else
 		shelter[c] = new Dog();
-	shelter[c++]->makeSound();
+	shelter[c]->makeSound();
+	std::cout << "lets take a look at whats going on is that cute little head of this " << shelter[c]->getType() << std::endl;
+	shelter[c++]->getIdea();
 	std::cout << "----------------------" << std::endl;
 }
 std::cout << "----------------------" << std::endl;
